@@ -1,0 +1,24 @@
+<template>
+    <lightning-card class="slds-size_1-of-1" title="Currency Rate Component">
+        <div style="height: 300px;">
+            <lightning-datatable
+                    key-field="id"
+                    data={data}
+                    columns={columns}>
+            </lightning-datatable>
+        </div>
+        <div class="slds-m-around--medium" style="width: 30rem;">
+            <article class="slds-tile">
+                <h3 class="slds-tile__title slds-truncate" title="Record details">Data details</h3>
+                <div class="slds-tile__detail">
+                    <dl class="slds-list_horizontal slds-wrap">
+                        <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Name">Currency base:</dt>
+                        <dd class="slds-item_detail slds-truncate">{base}</dd>
+                        <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Balance">Date:</dt>
+                        <dd class="slds-item_detail slds-truncate">{date}</dd>
+                    </dl>
+                </div>
+            </article>
+        </div>
+    </lightning-card>
+</template>

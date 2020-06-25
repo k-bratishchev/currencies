@@ -21,7 +21,6 @@ sfdx force:org:create orgName="$ORG_NAME" -f config/project-scratch-def.json -s 
 # Deploy metadata and settings, configure org
 sfdx force:source:push -u $ORG_ALIAS
 
-# Assign permissions
-# sfdx force:user:permset:assign -n Meetings_Permission_Set -u $ORG_ALIAS
+sfdx force:apex:execute -f scripts/SetScheduler.apex -u $ORG_ALIAS
 
 sfdx force:org:open -u $ORG_ALIAS
